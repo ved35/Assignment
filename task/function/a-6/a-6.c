@@ -1,37 +1,31 @@
-//find the largest number of element
+// Write a program to find out the max number from given array using function
 
 #include<stdio.h>
 
-int largest(int m , int b[])
+int max(int m ,int b[])
 {
-	//int x=m;
-	int j , max=0 , c[100];
-	
-	c[100]=b[100];
-	
-	for(j=0 ; j<=m ; j++)
+	int i ,maxi=0 ; 
+	for(i=0 ; i<m ; i++)
 	{
-		if(max < c[j])
+		if(maxi < b[i])
 		{
-			max = c[j];
+			maxi = b[i] ;
 		}
 	}
-	printf("max = %d",max);
+	return maxi;
 }
 
 void main()
 {
-	int n ; 
-	
-	printf("total element in array : ");
-	scanf("%d",&n);
-	
-	int i , a[n];
-	
+	int n=5 ;
+	int a[n] ,i ;
+	 
+	printf("Enter the Array value :\n");
 	for(i=0 ; i<n ; i++)
 	{
-		scanf("element-%d : %d",i,&a[i]);
+		printf("element-%d = ",i);
+		scanf("%d",&a[i]);
 	}
-	
-	printf("%d",largest(n , a));
+	int m = max(n ,a);
+	printf("\nMax element in array = %d",m);
 }

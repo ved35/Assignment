@@ -1,3 +1,5 @@
+// find max and min number in array
+
 // Write a program to find out the max number from given array using function
 
 #include<stdio.h>
@@ -15,6 +17,19 @@ int max(int m ,int b[])
 	return maxi;
 }
 
+int min(int m ,int b[])
+{
+	int i ,mi=b[0] ; 
+	for(i=0 ; i<m ; i++)
+	{
+		if(mi > b[i])
+		{
+			mi = b[i] ;
+		}
+	}
+	return mi;
+}
+
 void main()
 {
 	int n=5 ;
@@ -26,6 +41,9 @@ void main()
 		printf("element-%d = ",i);
 		scanf("%d",&a[i]);
 	}
-	int m = max(n ,a);
-	printf("\nMax element in array = %d",m);
+	int x = max(n ,a);
+	printf("\nMax element in array = %d",x);
+	
+	int y = min(n , a);
+	printf("\nMin element in array = %d",y);
 }
