@@ -10,7 +10,8 @@ int fact(int f)
 	}
 	else
 	{
-		return (f*fact(f-1));
+	 	f*fact(f-1);
+		printf("\n%d",f);
 	}	
 }
 void main()
@@ -20,5 +21,5 @@ void main()
 	printf("Enter the number : ");
 	scanf("%d",&n);
 	
-	printf("Factorial of %d : %d",n,fact(n));
+	printf("\n\nFactorial of %d : %d",n,fact(n));
 }
